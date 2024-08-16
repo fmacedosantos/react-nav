@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}: any) {
+
+  function navToGallery(){
+    navigation.navigate('gallery')
+  }
   return (
     <View style={styles.container}>
-        <Text>Home works</Text>
+      <Text>Home works</Text>
+      <Button title='Go to Gallery'
+      onPress={navToGallery}/>
     </View>
   );
 }
